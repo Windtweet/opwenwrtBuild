@@ -18,7 +18,9 @@ A template for building OpenWrt with GitHub Actions
 
 ## 编译过程中启用ssh时的命令
 进入ssh网页后使用control+c呼出命令栏
+
 输入cd openwrt && make menuconfig开始对.config文件做改动
+
 推出并保存后使用control+D断开网页ssh连接并使Actions编译继续
 
 
