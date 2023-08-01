@@ -36,7 +36,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
+      
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -168,12 +168,12 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
-
+        
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
@@ -187,4 +187,4 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
