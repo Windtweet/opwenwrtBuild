@@ -10,6 +10,8 @@ A template for building OpenWrt with GitHub Actions
 
 在我多尝试（包括我本地的服务器和Actions云端服务器）后，发现这个脚本原作者所使用的来自LEDE的分支对于树莓派以及部分插件的支持并不友好，会出现许多奇奇怪怪的编译错误，因此，如果你要修改源码仓库的话，请取保你自己有至少1次的成功编译并在你的机器上跑起来的经验，否则不建议随意修改。
 
+另外，如果你有任何问题，欢迎在issues栏目中提出，感谢您对本项目的支持，谢谢！
+
 ## 本项目参考
 
 https://github.com/immortalwrt/immortalwrt/tree/openwrt-21.02
